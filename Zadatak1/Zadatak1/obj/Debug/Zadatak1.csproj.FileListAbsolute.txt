@@ -1,0 +1,7 @@
+C:\Users\Matija\Desktop\C#\Zadatak1\Zadatak1\bin\Debug\Zadatak1.exe.config
+C:\Users\Matija\Desktop\C#\RAUPJC-Homework-1\Zadatak1\Zadatak1\bin\Debug\Zadatak1.exe.config
+C:\Users\Matija\Desktop\C#\RAUPJC-Homework-1\Zadatak1\Zadatak1\obj\Debug\Zadatak1.csprojResolveAssemblyReference.cache
+C:\Users\Matija\Desktop\C#\RAUPJC-Homework-1\Zadatak1\Zadatak1\bin\Debug\Zadatak1.exe
+C:\Users\Matija\Desktop\C#\RAUPJC-Homework-1\Zadatak1\Zadatak1\bin\Debug\Zadatak1.pdb
+C:\Users\Matija\Desktop\C#\RAUPJC-Homework-1\Zadatak1\Zadatak1\obj\Debug\Zadatak1.exe
+C:\Users\Matija\Desktop\C#\RAUPJC-Homework-1\Zadatak1\Zadatak1\obj\Debug\Zadatak1.pdb
