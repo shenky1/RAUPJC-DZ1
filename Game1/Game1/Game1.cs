@@ -132,6 +132,9 @@ namespace Game1
             // Load sounds
             // Start background music
             HitSound = Content.Load<SoundEffect>("hit");
+            Music = Content.Load<Song>("music");
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Play(Music);
 
         }
 
