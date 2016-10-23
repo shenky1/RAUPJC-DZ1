@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zadatak1
+namespace Zadatak2
 {
-    class IntegerList : IIntegerList
+    class GenericList<X> : IGenericList <X>
     {
 
-        private int[] _internalStorage;
+        private X[] _internalStorage;
         private int _count;
         private int _capacity;
 
@@ -21,14 +21,14 @@ namespace Zadatak1
             }
         }
 
-        public IntegerList()
+        public GenericList()
         {
-            _internalStorage = new int[4];
+            _internalStorage = new X[4];
             _capacity = 4;
             _count = 0;
         }
 
-        public IntegerList(int initialSize)
+        public GenericList(int initialSize)
         {
             if(initialSize < 1)
             {
@@ -36,11 +36,11 @@ namespace Zadatak1
             }
 
             _capacity = initialSize;
-            _internalStorage = new int[initialSize];
+            _internalStorage = new X[initialSize];
             _count = 0;
         }
 
-        public void Add(int item)
+        public void Add(X item)
         {
             if (Count == _capacity )
             {
@@ -53,7 +53,7 @@ namespace Zadatak1
         private void Reallocating()
         {
             _capacity = 2 * _capacity;
-            int[] doubledArray = new int[_capacity];
+            X[] doubledArray = new X[_capacity];
             for (int i = 0; i < _count; i++)
             {
                 doubledArray[i] = _internalStorage[i];
@@ -65,13 +65,13 @@ namespace Zadatak1
         {
             for (int i = Count - 1; i <= 0; i--)
             {
-                _internalStorage[i] = 0;
+                _internalStorage[i] = default(X);
             }
 
             _count = 0;
         }
 
-        public bool Contains(int item)
+        public bool Contains(X item)
         {
            if(this.IndexOf(item) != -1)
             {
@@ -80,21 +80,21 @@ namespace Zadatak1
             return false;
         }
 
-        public int GetElement(int index)
+        public X GetElement(int index)
         {
             if (index < 0 || index > _count - 1)
             {
                 throw new IndexOutOfRangeException("Index is wrong!");
             }
-
             return _internalStorage[index];
+
         }
 
-        public int IndexOf(int item)
+        public int IndexOf(X item)
         {
             for (int i = 0; i < _count; i++)
             {
-                if (_internalStorage[i] == item)
+                if (_internalStorage[i].Equals(item))
                     return i;
             }
 
@@ -113,16 +113,16 @@ namespace Zadatak1
                 _internalStorage[i] = _internalStorage[i + 1];
             }
 
-            _internalStorage[_count - 1] = 0;
+            _internalStorage[_count - 1] = default(X);
             _count--;
             return true;
         }
 
-         public bool Remove(int item)
+         public bool Remove(X item)
         {
             for (int i = 0; i < _count; i++)
             {
-                if (_internalStorage[i] == item)
+                if (_internalStorage[i].Equals(item))
                     return this.RemoveAt(i);
             }
 
